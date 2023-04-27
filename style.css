@@ -1,0 +1,106 @@
+:root{
+    --pink: #ff33cc;
+    --black:#455A64;
+}
+
+*{
+    font-family: 'Exo 2',sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+    transition: .2s linear;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background: #f2f2f2;
+}
+.container{
+    height: auto;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    color: var(--black);
+}
+
+.container h1{
+    margin: 2rem 0;
+    font-size: 4rem;
+    position: relative;
+}
+
+.container h1::before,::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--pink);
+    height: .3rem;
+}
+.container h1::before{
+    width: 60%;
+    bottom: -2rem;
+}
+.container h1::after{
+    width: 80%;
+    bottom: -1rem;
+}
+.container .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90vw;
+    margin-top: 2rem;
+}
+.container .box-container .box{
+    height: 25rem;
+    width: 32rem;
+    border-radius: .5rem;
+    margin: 1rem;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: .25rem .25rem .25rem #ccc, -.25rem -.25rem .25rem #fff;
+}*
+.container .box-container .box:hover{
+    box-shadow: inset .25rem .25rem .25rem #ccc,inset -.25rem -.25rem .25rem #fff;
+}
+
+.container .box-container .box img{
+    height: 10rem;
+    margin-top: 2rem;
+}
+.container .box-container .box h2{
+    font-size: 2rem;
+}
+.container .box-container .box h4{
+    color: var(--pink);
+}
+.container .box-container .box p{
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+.container .box-container .box p i{
+    font-size: 2rem;
+    padding: 0 .2rem;
+    color: var(--pink);
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:377px){
+    html{
+        font-size: 45%;
+    }
+}
